@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>User</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script type="text/javascript" src="http://malsup.github.com/jquery.form.js"></script> 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>  
+        <script type="text/javascript" src="./js/main.js"></script>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+    <body>
+        <br/>
+        <h2>User List</h2>
+        <div id="ajax_list">
+        <table class="list_table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+	            <tr id="list_tr">
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <br />
+
+        <h3>Add User </h3>
+        <form id="user_add_form" name="user_add_form" method="POST" >
+            <input type="text" id="add_first_name" name="first_name" value="" required/>
+            <input type="text" id="add_last_name" name="last_name" value="" required/>
+            <input type="text" id="add_email" name="email" value="" required/>
+            <input type="submit" id="submit_add" value="Add" />
+        </form>
+
+        <br/><br/>
+
+        <h3>Modify User</h3>
+        <form id="user_mod_form" name="user_mod_form" method="PUT" > 
+            <input type="hidden" id="mod_id" name="id" value="" required/>
+            <input type="text" id="mod_first_name" name="first_name" value="" required/>
+            <input type="text" id="mod_last_name" name="last_name" value="" required/>
+            <input type="text" id="mod_email" name="email" value="" required/>
+            <input type="submit" id="submit_modify" value="Modify" />
+        </form>
+
+    </body>
+</html>
